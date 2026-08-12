@@ -1,0 +1,10 @@
+CREATE DATABASE job_watcher;
+USE job_watcher;
+CREATE TABLE jobs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255),
+    company VARCHAR(255),
+    link VARCHAR(500) UNIQUE,
+    date_found DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+SHOW TABLES;
