@@ -1,0 +1,16 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class DbTest {
+    public static void main(String[] args) {
+        String url = "jdbc:mysql://localhost:3306/job_watcher";
+        String user = "root";
+        String password = "your password"; // your actual MySQL password
+
+        try (Connection conn = DriverManager.getConnection(url, user, password)) {
+            System.out.println("Connected successfully!");
+        } catch (Exception e) {
+            System.out.println("Connection failed:");
+            e.printStackTrace();
+        }
+    }
